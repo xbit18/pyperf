@@ -10,7 +10,8 @@ from shutil import which
 # Currently there is a packaging issue for PEP-703,
 # Until then psutil is disabled as a workaround.
 # See: https://github.com/python/cpython/issues/116024
-USE_PSUTIL = not bool(sysconfig.get_config_var('Py_GIL_DISABLED'))
+USE_PSUTIL = False
+#USE_PSUTIL = not bool(sysconfig.get_config_var('Py_GIL_DISABLED'))
 MS_WINDOWS = (sys.platform == 'win32')
 MAC_OS = (sys.platform == 'darwin')
 
